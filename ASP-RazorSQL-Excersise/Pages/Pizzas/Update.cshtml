@@ -1,0 +1,49 @@
+﻿@page
+@model ASP_RazorSQL_Excersise.Pages.Pizzas.UpdateModel
+@{
+}
+
+<h2 class="mb-3 display-2">Update Pizza</h2>
+@if (!Model.ErrorMessage.Equals("")){
+    <h2><strong>@Model.ErrorMessage</strong></h2>
+}
+
+<form method="POST">
+    <input type="hidden" id="pizzaId" name="pizzaId" value="@Model.pizzaDto.Id" />
+    <div class="row mb-3">
+        <label for="coldCut" class="col-md-1 col-form-label">Cold Cut Meat</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="coldCut"
+            id="coldCut"  value="@Model.pizzaDto.ColdCut" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="cheese" class="col-md-1 col-form-label">Cheese</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="cheese"
+            id="cheese" placeholder="Enter Cheese" value="@Model.pizzaDto.Cheese" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="topping1" class="col-md-1 col-form-label">Topping 1</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="topping1"
+            id="topping1" placeholder="Enter a pizza topping" value="@Model.pizzaDto.Topping1" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="topping2" class="col-md-1 col-form-label">topping2</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="topping2"
+            id="topping2" placeholder="Enter a pizza topping" value="@Model.pizzaDto.Topping2" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-md-1 col-md-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-md-3 d-grid">
+            <a href="/" role="button" class="btn btn-outline-primary">Cancel</a>
+        </div>
+    </div>
+</form>

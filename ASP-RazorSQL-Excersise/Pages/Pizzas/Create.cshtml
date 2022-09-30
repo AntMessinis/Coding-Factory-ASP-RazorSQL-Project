@@ -1,0 +1,43 @@
+﻿@page
+@model ASP_RazorSQL_Excersise.Pages.Pizzas.CreateModel
+@{
+}
+<h2 class="display-2">Add Your Pizza</h2>
+<form method="POST">
+    <div class="row mb-3">
+        <label for="coldCut" class="col-md-1 col-form-label">Cold Cut Meat</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="coldCut" 
+            id="coldCut" placeholder="Bacon" value="@Model.dto.ColdCut" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="cheese" class="col-md-1 col-form-label">Cheese</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="cheese"
+            id="cheese" placeholder="Cheddar" value="@Model.dto.Cheese" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="topping1" class="col-md-1 col-form-label">Topping 1</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="topping1"
+            id="topping1" placeholder="Mushrooms" value="@Model.dto.Topping1" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label for="topping2" class="col-md-1 col-form-label">Topping 2</label>
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="topping2"
+            id="topping2" placeholder="Peppers" value="@Model.dto.Topping2" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-md-1 col-md-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-md-3 d-grid">
+            <a href="/" role="button" class="btn btn-outline-primary">Cancel</a>
+        </div>
+    </div>
+</form>

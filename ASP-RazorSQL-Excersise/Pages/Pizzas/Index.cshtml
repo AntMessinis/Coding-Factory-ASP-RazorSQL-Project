@@ -1,0 +1,28 @@
+﻿@page
+@model ASP_RazorSQL_Excersise.Pages.Pizzas.IndexModel
+@{
+}
+
+<div class="container-xl">
+    <h2 class="display-2">Pizza Menu</h2>
+    <table class="table mt-5">
+        <tbody>
+            @if(Model.Pizzas.Count > 0){
+                @foreach (var pizza in Model.Pizzas)
+                {
+                    <tr>
+                                <td>@pizza.ColdCut</td>
+                                <td>@pizza.Cheese</td>
+                                <td>@pizza.Topping1</td>
+                                <td>@pizza.Topping2</td>
+                                <td><a class="btn btn-primary" href="/Pizzas/Update?Id=@pizza.Id">Edit Pizza</a></td>
+                                <td><a class="btn btn-primary" href="/Pizzas/Delete?Id=@pizza.Id">Delete from Menu</a></td>
+                        
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <h5 class="display-5 mt-5">Add new Pizza to menu</h5>
+    <a class="btn btn-primary mt-2" href="/Pizzas/Create">Add Pizza</a>
+</div>
